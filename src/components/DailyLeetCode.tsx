@@ -59,23 +59,8 @@ const SolutionDetail: React.FC<SolutionDetailProps> = ({ solution, onBack }) => 
 
   // Simple syntax highlighting function
   const renderCodeLine = (line: string, index: number) => {
-    const parts = [];
-    let currentIndex = 0;
-    
-    // Keywords
-    const keywords = /(class|def|if|for|in|return|while|import|from|as|self)/g;
-    // Types
-    const types = /(Solution|ListNode|Optional|List|int|bool)/g;
-    // Functions
-    const functions = /(twoSum|addTwoNumbers|len|range|__init__|val|next)/g;
-    // Comments
-    const comments = /(#.*)/g;
-    // Numbers
-    const numbers = /(\b\d+\b)/g;
-    
-    // For simplicity, let's just use basic coloring without complex parsing
+   
     if (line.includes('#')) {
-      // Comment line
       return <span key={index} className="text-[#5c6370]">{line}</span>;
     }
     
