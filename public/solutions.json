@@ -27,8 +27,22 @@
       "problemUrl": "https://leetcode.com/problems/two-sum/",
       "solution": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        numMap = {}\n        for i, num in enumerate(nums):\n            complement = target - num\n            if complement in numMap:\n                return [numMap[complement], i]\n            numMap[num] = i\n        return []",
       "filename": "TwoSum.py"
+    },
+    {
+      "id": "0949f2ca428b775a6bba77af4283ab11aff1a23d6d1ab0fdc25b884042052eaf",
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Stack"
+      ],
+      "date": "2025-07-18",
+      "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+      "problemUrl": "https://leetcode.com/problems/valid-parentheses/",
+      "solution": "class Solution:\n    def isValid(self, s: str) -> bool:\n        stack = []\n        mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n        \n        for char in s:\n            if char in mapping:\n                top_element = stack.pop() if stack else '#'\n                if mapping[char] != top_element:\n                    return False\n            else:\n                stack.append(char)\n        \n        return not stack",
+      "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 2,
-  "lastUpdated": "2025-07-18T02:27:38.624Z"
+  "totalSolutions": 3,
+  "lastUpdated": "2025-07-18T20:12:38.124Z"
 }
