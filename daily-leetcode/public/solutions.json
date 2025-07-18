@@ -1,35 +1,20 @@
 {
   "solutions": [
     {
-      "id": "59f1341cb07e3da2390c45386fc051cfe7ec170afdcaa3ac93a8abaaff6610d2",
-      "title": "Add Two Numbers",
-      "difficulty": "Medium",
-      "tags": [
-        "Linked List",
-        "Math",
-        "Recursion"
-      ],
-      "date": "2025-01-16",
-      "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
-      "problemUrl": "https://leetcode.com/problems/add-two-numbers/",
-      "solution": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\n\r\nclass Solution:\r\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:\r\n        dummyHead = ListNode(0)\r\n        curr = dummyHead\r\n        carry = 0\r\n        \r\n        while l1 or l2 or carry:\r\n            v1 = l1.val if l1 else 0\r\n            v2 = l2.val if l2 else 0\r\n            \r\n            # Calculate new digit\r\n            val = v1 + v2 + carry\r\n            carry = val // 10\r\n            val = val % 10\r\n            \r\n            curr.next = ListNode(val)\r\n            curr = curr.next\r\n            \r\n            # Move to next nodes\r\n            l1 = l1.next if l1 else None\r\n            l2 = l2.next if l2 else None\r\n        \r\n        return dummyHead.next",
-      "filename": "AddTwoNumbers.py"
-    },
-    {
-      "id": "e0cad571aa2e049881ca32323c36ca79611151477947d3b619ae9d09496e8577",
-      "title": "Two Sum",
+      "id": "93c3bed31d030b5868fb81deb000d426c063e7a19d75ab28b7b8c693727951a8",
+      "title": "Example Problem",
       "difficulty": "Easy",
       "tags": [
         "Array",
-        "Hash Table"
+        "Example"
       ],
       "date": "2025-01-15",
-      "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
+      "description": "This is an example solution file showing the required format. Replace this with your actual LeetCode solutions! Make sure to include all metadata fields above your solution code.",
       "problemUrl": "https://leetcode.com/problems/two-sum/",
-      "solution": "class Solution:\r\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\r\n        numMap = {}\r\n        n = len(nums)\r\n        \r\n        for i in range(n):\r\n            complement = target - nums[i]\r\n            if complement in numMap:\r\n                return [numMap[complement], i]\r\n            numMap[nums[i]] = i\r\n        \r\n        return []  # No solution found",
-      "filename": "TwoSum.py"
+      "solution": "class Solution:\r\n    def exampleFunction(self, nums: List[int]) -> List[int]:\r\n        \"\"\"\r\n        This is an example solution.\r\n        \r\n        Replace this entire file with your actual LeetCode solutions.\r\n        Keep the metadata format above (Title, Difficulty, etc.)\r\n        \"\"\"\r\n        return []",
+      "filename": "ExampleSolution.py"
     }
   ],
-  "totalSolutions": 2,
-  "lastUpdated": "2025-07-17T22:01:20.480Z"
+  "totalSolutions": 1,
+  "lastUpdated": "2025-07-18T01:34:47.115Z"
 }

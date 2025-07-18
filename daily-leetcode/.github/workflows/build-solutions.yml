@@ -1,0 +1,42 @@
+name: Build Solutions JSON
+
+# Trigger when files in solutions/ folder change
+on:
+  push:
+    paths:
+      - 'solutions/**'
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install parser dependencies
+      run: |
+        cd scripts
+        npm install
+        
+    - name: Run solution parser
+      run: |
+        cd scripts
+        node parse-solutions.js
+        
+    - name: Commit updated solutions.json
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add public/solutions.json
+        git diff --staged --quiet || git commit -m "Auto-update solutions.json [skip ci]"
+        git push
+
+    - name: Display success message
+      run: echo "Solutions JSON updated successfully!"
