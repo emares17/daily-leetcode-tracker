@@ -13,8 +13,22 @@
       "problemUrl": "https://leetcode.com/problems/two-sum/",
       "solution": "class Solution:\n    def exampleFunction(self, nums: List[int]) -> List[int]:\n        \"\"\"\n        This is an example solution.\n        \n        Replace this entire file with your actual LeetCode solutions.\n        Keep the metadata format above (Title, Difficulty, etc.)\n        \"\"\"\n        return []",
       "filename": "ExampleSolution.py"
+    },
+    {
+      "id": "e0cad571aa2e049881ca32323c36ca79611151477947d3b619ae9d09496e8577",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "date": "2025-01-17",
+      "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+      "problemUrl": "https://leetcode.com/problems/two-sum/",
+      "solution": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        numMap = {}\n        for i, num in enumerate(nums):\n            complement = target - num\n            if complement in numMap:\n                return [numMap[complement], i]\n            numMap[num] = i\n        return []",
+      "filename": "TwoSum.py"
     }
   ],
-  "totalSolutions": 1,
-  "lastUpdated": "2025-07-18T02:23:37.565Z"
+  "totalSolutions": 2,
+  "lastUpdated": "2025-07-18T02:27:38.624Z"
 }
