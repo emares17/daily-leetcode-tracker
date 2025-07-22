@@ -15,6 +15,22 @@
       "filename": "ExampleSolution.py"
     },
     {
+      "id": "c2d4ea35248af7eea512a6b7309556286eb4feb582475aed94c43e50d3717c1b",
+      "title": "Top K Frequent Elements",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Heap",
+        "Sorting"
+      ],
+      "date": "2025-07-21",
+      "description": "Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.",
+      "problemUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "solution": "class Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        freq = {}\n        \n        for num in nums:\n            freq[num] = freq.get(num, 0) + 1\n\n        max_heap = [(-val, key) for key, val in freq.items()]\n\n        heapq.heapify(max_heap)\n\n        most_freq = heapq.nsmallest(k, max_heap)\n\n        return [key for val, key in most_freq]",
+      "filename": "TopKFrequentElements.py"
+    },
+    {
       "id": "e0cad571aa2e049881ca32323c36ca79611151477947d3b619ae9d09496e8577",
       "title": "Two Sum",
       "difficulty": "Easy",
@@ -43,6 +59,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 3,
-  "lastUpdated": "2025-07-18T20:12:38.124Z"
+  "totalSolutions": 4,
+  "lastUpdated": "2025-07-22T01:27:07.242Z"
 }
