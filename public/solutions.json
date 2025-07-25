@@ -1,6 +1,20 @@
 {
   "solutions": [
     {
+      "id": "6ae625cefcf60e500beef5923dee06a5749ee228fd5d7be9dd5b53a512019174",
+      "title": "Contains Duplicate",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Sets"
+      ],
+      "date": "2025-07-24",
+      "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+      "problemUrl": "https://leetcode.com/problems/contains-duplicate/",
+      "solution": "class Solution:\n    def containsDuplicate(self, nums: List[int]) -> bool:\n        repeats = set(nums)\n        \n        if len(repeats) != len(nums):\n            return True\n        else:\n            return False",
+      "filename": "ContainsDuplicate.py"
+    },
+    {
       "id": "93c3bed31d030b5868fb81deb000d426c063e7a19d75ab28b7b8c693727951a8",
       "title": "Example Problem",
       "difficulty": "Easy",
@@ -75,6 +89,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 5,
-  "lastUpdated": "2025-07-22T19:56:15.444Z"
+  "totalSolutions": 6,
+  "lastUpdated": "2025-07-25T01:00:38.962Z"
 }
