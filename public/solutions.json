@@ -29,6 +29,21 @@
       "filename": "ExampleSolution.py"
     },
     {
+      "id": "a378c78b290d0d949325e07400223a43d5e66b7dbd95aecaa392a4059a41fef9",
+      "title": "Find Lucky Integer in an Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "date": "2025-07-24",
+      "description": "Given an array of integers arr, a lucky integer is an integer that has a frequency in the array equal to its value. Return the largest lucky integer in the array. If there is no lucky integer return -1.",
+      "problemUrl": "https://leetcode.com/problems/find-lucky-integer-in-an-array/",
+      "solution": "class Solution:\n    def findLucky(self, arr: List[int]) -> int:\n        freq = Counter(arr)\n        largest = -1\n\n        for k,v in freq.items():\n            if k == v:\n                largest = max(largest, k)\n        \n        return largest",
+      "filename": "FindLuckyIntegerInAnArray.py"
+    },
+    {
       "id": "aca64205fe8180e65ad629ff46ff13cba5e061e0929d31a30bc43d9d4b20da42",
       "title": "Group Anagrams",
       "difficulty": "Medium",
@@ -89,6 +104,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 6,
-  "lastUpdated": "2025-07-25T01:00:38.962Z"
+  "totalSolutions": 7,
+  "lastUpdated": "2025-07-25T02:01:05.305Z"
 }
