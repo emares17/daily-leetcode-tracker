@@ -60,6 +60,19 @@
       "filename": "GroupAnagrams.py"
     },
     {
+      "id": "9732197e56272e3947766795f6c25737ff3df8951749a64c580a3688eeb11886",
+      "title": "Score of a String",
+      "difficulty": "Easy",
+      "tags": [
+        "String"
+      ],
+      "date": "2025-07-25",
+      "description": "You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters. Return the score of s.",
+      "problemUrl": "https://leetcode.com/problems/score-of-a-string/",
+      "solution": "class Solution:\n    def scoreOfString(self, s: str) -> int:\n        score = 0\n        for letter in range(len(s) - 1):\n            score = abs(ord(s[letter]) - ord(s[letter + 1]))\n        return score",
+      "filename": "ScoreOfAString.py"
+    },
+    {
       "id": "c2d4ea35248af7eea512a6b7309556286eb4feb582475aed94c43e50d3717c1b",
       "title": "Top K Frequent Elements",
       "difficulty": "Medium",
@@ -104,6 +117,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 7,
-  "lastUpdated": "2025-07-25T02:01:05.305Z"
+  "totalSolutions": 8,
+  "lastUpdated": "2025-07-25T23:20:21.775Z"
 }
