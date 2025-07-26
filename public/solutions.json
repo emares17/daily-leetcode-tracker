@@ -60,6 +60,21 @@
       "filename": "GroupAnagrams.py"
     },
     {
+      "id": "5c68a6c7df6d7cc2e6167e0b7572846997593b56098b18b5c7c5f40a5b538ae7",
+      "title": "Is Subsequence",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "String"
+      ],
+      "date": "2025-07-26",
+      "description": "Given two strings s and t, return true if s is a subsequence of t, or false otherwise. A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., \"ace\" is a subsequence of \"abcde\" while \"aec\" is not).",
+      "problemUrl": "https://leetcode.com/problems/is-subsequence/",
+      "solution": "class Solution:\n    def isSubsequence(self, s: str, t: str) -> bool:\n        i = 0\n        for l in t:\n            if i < len(s) and s[i] == l:\n                i += 1\n        return i == len(s)",
+      "filename": "IsSubsequence.py"
+    },
+    {
       "id": "9732197e56272e3947766795f6c25737ff3df8951749a64c580a3688eeb11886",
       "title": "Score of a String",
       "difficulty": "Easy",
@@ -117,6 +132,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 8,
-  "lastUpdated": "2025-07-25T23:20:21.775Z"
+  "totalSolutions": 9,
+  "lastUpdated": "2025-07-26T21:06:42.109Z"
 }
