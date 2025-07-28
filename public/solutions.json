@@ -88,6 +88,21 @@
       "filename": "ScoreOfAString.py"
     },
     {
+      "id": "d27cb24e2f80ac085f53ca840593b7bad5b012ade4e91d2015c3326259144534",
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Prefix Sum"
+      ],
+      "date": "2025-07-28",
+      "description": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k. A subarray is a contiguous non-empty sequence of elements within an array.",
+      "problemUrl": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "solution": "class Solution:\n    def subarraySum(self, nums: List[int], k: int) -> int:\n        count = 0\n        prefix_sum = 0\n\n        prefix_count = {}\n\n        prefix_count[0] = 1\n\n        for num in nums:\n            prefix_sum += num\n            target = prefix_sum - k\n\n            if target in prefix_count:\n                count += prefix_count.get(target, 0)\n            \n            prefix_count[prefix_sum] = prefix_count.get(prefix_sum, 0) + 1\n\n        return count",
+      "filename": "SubarraySumEqualsK.py"
+    },
+    {
       "id": "c2d4ea35248af7eea512a6b7309556286eb4feb582475aed94c43e50d3717c1b",
       "title": "Top K Frequent Elements",
       "difficulty": "Medium",
@@ -132,6 +147,6 @@
       "filename": "ValidParentheses.py"
     }
   ],
-  "totalSolutions": 9,
-  "lastUpdated": "2025-07-26T21:06:42.109Z"
+  "totalSolutions": 10,
+  "lastUpdated": "2025-07-28T22:45:49.456Z"
 }
